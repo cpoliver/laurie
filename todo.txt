@@ -1,0 +1,38 @@
+Hue Laurie
+
+Group
+  id ''
+  name ''
+  lights []
+  state {
+    anyOn?,
+    allOn?
+  }
+  ---
+  create(name)
+  rename(newName)
+  delete()
+  copy(name)
+  action(state)
+  addLights(lightIds)
+  removeLights(lightIds)
+
+Light
+  id ''
+  name ''
+  type ''
+  state {}
+  ---
+  action(state)
+  rename()
+
+State
+  on?,
+  bri int,
+  hue int,
+  sat int,
+  effect ''
+  xy: [xFloat, yFloat],
+  ct: int,
+  alert: '',
+  colormode: '' 
