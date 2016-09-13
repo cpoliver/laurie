@@ -6,9 +6,9 @@ import LightActions from '../light-actions';
 const Light = ({ light }) => (
   <div className="c-light">
     <ul>
-      <li>{light.id}</li>
-      <li>{light.name}</li>
-      <li>{light.type}</li>
+      <li>id: {light.id}</li>
+      <li>name: {light.name}</li>
+      <li>type: {light.type}</li>
     </ul>
     <LightState state={light.state}/>
     <LightActions/>
