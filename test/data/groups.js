@@ -1,10 +1,5 @@
 module.exports = [
   {
-    id: '0',
-    name: 'Lightset 0',
-    type: 'LightGroup'
-  },
-  {
     id: '1',
     name: 'Kitchen',
     lights: ['1', '15', '4', '2', '3'],
