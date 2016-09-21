@@ -53,14 +53,16 @@ GroupActions
 LightActions
   rename(newName)
   addTo(groups)
-  remoteFrom(groups)
+  removeFrom(groups)
 
 StateActions
   toggle()
-  ?turnOff()
-  ?turnOn()
+  turnOff()
+  turnOn()
+
   setColour({type: hsb/hsl/rgb/xy, value:{} })
-  ?effect/colourCycle
-  ?colourTemperature(valie)
-  ?alert
-  ?colormode
+  setColourTemperature()
+  setColourMode()
+
+  setEffect(effect = colourCycle)
+  sendAlert(type = "long")
