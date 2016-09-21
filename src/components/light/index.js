@@ -1,7 +1,8 @@
 import React from 'react';
 
-import Actions from '../actions';
-import LightState from '../light-state';
+import LightActionButtons from '../light-action-buttons';
+import LightStatePreview from '../light-state-preview';
+import StateActionButtons from '../light-action-buttons';
 
 const Light = ({ light }) => (
   <div className="c-light">
@@ -9,8 +10,9 @@ const Light = ({ light }) => (
       <li>id: {light.id}</li>
       <li>name: {light.name}</li>
       <li>type: {light.type}</li>
-      <li><em><LightState state={light.state}/></em></li>
-      <li><em><Actions/></em></li>
+      <li><em><LightStatePreview state={light.state}/></em></li>
+      <li><em><LightActionButtons/></em></li>
+      <li><em><StateActionButtons/></em></li>
     </ul>
   </div>
 );

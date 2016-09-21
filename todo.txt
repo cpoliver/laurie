@@ -1,38 +1,66 @@
-Hue Laurie
-
 Group
   id ''
   name ''
-  lights []
-  state {
-    anyOn?,
-    allOn?
-  }
+  anyOn?
+  allOn?
   ---
-  create(name)
-  rename(newName)
-  delete()
-  copy(name)
-  action(state)
-  addLights(lightIds)
-  removeLights(lightIds)
+  LightsPreview
+  ---
+  GroupActions
+  ---
+  StateActions
 
 Light
   id ''
   name ''
   type ''
-  state {}
   ---
-  action(state)
-  rename()
+  LightState
+  ---
+  LightActions
+  ---
+  StateActions
 
-State
-  on?,
-  bri int,
-  hue int,
-  sat int,
-  effect ''
-  xy: [xFloat, yFloat],
-  ct: int,
-  alert: '',
-  colormode: '' 
+----------------
+
+LightState
+  on?
+  ---
+  ColourState
+  ---
+  GroupPreview
+  ---
+  ?StateActions
+
+ColourState
+  hue int
+  bri int
+  sat int
+  ?xy: [xFloat, yFloat]
+  ?ct: int
+  ?colormode: ''
+
+----------------
+
+GroupActions
+  rename(newName)
+  create(name)
+  delete()
+  copy(name)
+  addLights(lightIds)
+  removeLights(lightIds)
+
+LightActions
+  rename(newName)
+  addTo(groups)
+  remoteFrom(groups)
+
+StateActions
+  toggle()
+  ?turnOff()
+  ?turnOn()
+  setColour({type: hsb/hsl/rgb/xy, value:{} })
+  ?effect/colourCycle
+  ?colourTemperature(valie)
+  ?alert
+  ?colormode
