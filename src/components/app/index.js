@@ -1,7 +1,7 @@
 import React from 'react';
 
+import Group from '../group';
 import Light from '../light';
-import LightGroup from '../light-group';
 
 import groups from '../../../test/data/groups';
 import { lights } from '../../../test/data/lights';
@@ -11,7 +11,7 @@ const App = () => (
     <div className="row">
       <h1>Hue Laurie</h1>
       <h2>Groups</h2>
-      { groups.map((group, i) => <LightGroup key={i} group={group}/>) }
+      { groups.map((group, i) => <Group key={i} group={group}/>) }
     </div>
     <div className="row">
       <h2>Lights</h2>

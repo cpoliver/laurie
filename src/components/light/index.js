@@ -1,15 +1,15 @@
 import React from 'react';
 
-import LightActionButtons from '../light-action-buttons';
-import LightStatePreview from '../light-state-preview';
-import StateActionButtons from '../state-action-buttons';
+import LightActions from './actions';
+import StateActions from '../state/actions';
+import StatePreview from '../state/preview';
 
 const Light = ({ light }) => (
   <div className="c-light col-4">
     <h4><a href="#">{light.name}</a></h4>
-    <LightStatePreview state={light.state}/>
-    <LightActionButtons/>
-    <StateActionButtons/>
+    <StatePreview state={light.state}/>
+    <LightActions/>
+    <StateActions/>
   </div>
 );
 

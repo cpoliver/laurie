@@ -1,14 +1,14 @@
 import React from 'react';
 
-import GroupActionButtons from '../group-action-buttons';
-import StateActionButtons from '../state-action-buttons';
+import GroupActions from './actions';
+import StateActions from '../state/actions';
 
 const LightGroup = ({ group }) => (
   <div className="c-light-group col-4">
     <h4><a href="#">{group.name}</a></h4>
     (light-list)
-    <GroupActionButtons/>
-    <StateActionButtons/>
+    <GroupActions/>
+    <StateActions/>
   </div>
 );
 
