@@ -7,14 +7,16 @@ import groups from '../../../test/data/groups';
 import { lights } from '../../../test/data/lights';
 
 const App = () => (
-  <div>
-    <h1>Hue Laurie</h1>
-    <hr/>
-    <h2>Groups</h2>
-    { groups.map((group, i) => <LightGroup key={i} group={group}/>) }
-    <hr/>
-    <h2>Lights</h2>
-    { lights.map((light, i) => <Light key={i} light={light}/>) }
+  <div className="grid grid-fluid">
+    <div className="row">
+      <h1>Hue Laurie</h1>
+      <h2>Groups</h2>
+      { groups.map((group, i) => <LightGroup key={i} group={group}/>) }
+    </div>
+    <div className="row">
+      <h2>Lights</h2>
+      { lights.map((light, i) => <Light key={i} light={light}/>) }
+    </div>
   </div>
 );
 
