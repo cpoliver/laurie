@@ -1,4 +1,4 @@
-{
+module.exports = {
   id: '1',
   state: {
     on: true,
@@ -18,4 +18,4 @@
   manufacturername: 'Philips',
   uniqueid: '00:17:88:01:00:e9:27:76-0b',
   swversion: '5.23.1.13105'
-}
+};
